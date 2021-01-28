@@ -28,5 +28,15 @@ public class virtualPetCat {
         public String getName(){
             return name;
         }
-    }
+        public int getHunger(){
+            return hunger;
+        }
+        public int getThirst() {
+            return thirst;
+        }
+        public String getMood(){
+            return mood;
+        }
 }
+
+
