@@ -12,7 +12,7 @@ public class VirtualPet {
     private String name;
     private int hunger = 0;
     private int thirst = 0;
-    private int mood = 0;
+    private int mood = 100;
     private int cleanliness = 100;
 
     public VirtualPet(String newName) {
@@ -21,9 +21,10 @@ public class VirtualPet {
 
     // Method to print greeting to console
     public void greeting() {
-        System.out.println("Hi. My name is" + name + "I am so happy you have chosen to be my friend" +
-                "I am feeling" + hunger + " I am also feeling" + thirst + "I am feeling" + mood +
+        System.out.println("Hi. My name is " + name + "I am so happy you have chosen to be my friend " +
+                "I am feeling " + hunger + " I am also feeling " + thirst + "I am feeling " + mood +
                 "How can you help me?");
+
 
     }
 
@@ -50,33 +51,36 @@ public class VirtualPet {
     }
 
     // Method to feed pet
-    public void feed() {
+    public void eat() {
         hunger -= 5;
         if (hunger < 0) {
             hunger = 0;
         }
     }
     // Method to give water to pet
-    public void giveWater() {
+    public void drink() {
         thirst -= 5;
         if (thirst < 0) {
             thirst = 0;
         }
     }
     // Method to give a pet a treat & increase happiness
-    public void giveTreat() {
+    public void play() {
         mood -= 5;
         if (mood < 0) {
             mood = 0;
         }
     }
     // Method to give the pet a bath & improve cleanliness
-    public void giveBath() {
+    public void Bathe() {
         cleanliness -= 0;
-        if (cleanliness > 0) {
+        if (cleanliness < 0) {
             cleanliness = 0;
         }
     }
+
+    // Method to create strings based on the integer value
+
 
 }
 
