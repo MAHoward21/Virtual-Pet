@@ -15,7 +15,7 @@ public class VirtualPet {
     private int mood = 0;
     private int cleanliness = 100;
 
-    public VirtualPet(String newName, String newDescription) {
+    public VirtualPet(String newName) {
         name = newName;
     }
 
