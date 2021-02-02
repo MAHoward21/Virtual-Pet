@@ -78,9 +78,6 @@ public class VirtualPet {
             cleanliness = 0;
         }
     }
-
-    // Method to create strings based on the integer value
-
-
 }
+
 
