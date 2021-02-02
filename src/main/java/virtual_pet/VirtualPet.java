@@ -50,8 +50,10 @@ public class VirtualPet {
         return cleanliness;
     }
 
+    public boolean isPetAlive = true;
+
     // Method to feed pet
-    public void eat() {
+    public void feed() {
         hunger -= 5;
         if (hunger < 0) {
             hunger = 0;
@@ -72,11 +74,21 @@ public class VirtualPet {
         }
     }
     // Method to give the pet a bath & improve cleanliness
-    public void Bathe() {
+    public void bathe() {
         cleanliness -= 0;
         if (cleanliness < 0) {
             cleanliness = 0;
         }
+    }
+    public void tick(){
+        mood -= 5;
+        thirst -= 5;
+        hunger -= 5;
+        cleanliness -=5;
+    }
+
+    public boolean getIsThisPetAlive(){
+        return isPetAlive;
     }
 }
 
