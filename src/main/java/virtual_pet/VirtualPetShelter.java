@@ -86,25 +86,19 @@ public class VirtualPetShelter<collection> {
     // Method to display the status of pets
     public String showStatus() {
         String showStatusOfPets = "";
-        for(Entry<String, VirtualPet> eachPet: petsInShelter.entrySet()) {
-            nameAndDescriptions +=
+        for (Entry<String, VirtualPet> eachPet : petsInShelter.entrySet()) {
+            showStatusOfPets += eachPet.getValue() + "/n";
         }
+        return showStatusOfPets;
+    }
 
     // Method to display the names & descriptions of pets
-        public String showNameAndText() {
+        public String showNameAndText(){
             String namesAndText = "";
             for(Entry<String, VirtualPet> eachPet : petsInShelter.entrySet()){
                 namesAndText += "[" + eachPet.getValue().getName() + "] " + eachPet.getValue()
                         + "\n";
             }
             return namesAndText;
-
         }
-
-
-}
-
-
-
-
 }

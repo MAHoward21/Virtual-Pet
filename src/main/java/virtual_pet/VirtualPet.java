@@ -24,8 +24,6 @@ public class VirtualPet {
         System.out.println("Hi. My name is " + name + "I am so happy you have chosen to be my friend " +
                 "I am feeling " + hunger + " I am also feeling " + thirst + "I am feeling " + mood +
                 "How can you help me?");
-
-
     }
 
     // Methods to return values for stats
