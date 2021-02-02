@@ -56,11 +56,12 @@ public class VirtualPetShelter<collection> {
 
 
     // Tick Method
-    public void tick(){
-        for(Entry<String, VirtualPet> beenTickedPet : petsInShelter.entrySet()){
+    public void tick() {
+        for (Entry<String, VirtualPet> beenTickedPet : petsInShelter.entrySet()) {
             String key = beenTickedPet.getKey();
             petsInShelter.get(key).tick();
         }
+    }
 
 
     // Method to grab the number of pets
@@ -76,17 +77,29 @@ public class VirtualPetShelter<collection> {
             for (Entry<String, VirtualPet> lookedAt : petsInShelter.entrySet()){
                 String key = lookedAt.getKey();
                 if(petsInShelter.get(key).getIsThisPetAlive()) {
-                    arePetsDead = false;
+                    isPetDead = false;
                 }
             }
-            return isPetDead;
+            return arePetsDead();
         }
 
     // Method to display the status of pets
-
+    public String showStatus() {
+        String showStatusOfPets = "";
+        for(Entry<String, VirtualPet> eachPet: petsInShelter.entrySet()) {
+            nameAndDescriptions +=
+        }
 
     // Method to display the names & descriptions of pets
+        public String showNameAndText() {
+            String namesAndText = "";
+            for(Entry<String, VirtualPet> eachPet : petsInShelter.entrySet()){
+                namesAndText += "[" + eachPet.getValue().getName() + "] " + eachPet.getValue()
+                        + "\n";
+            }
+            return namesAndText;
 
+        }
 
 
 }
