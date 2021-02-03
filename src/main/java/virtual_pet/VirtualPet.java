@@ -2,10 +2,25 @@ package virtual_pet;
 // This is basically the back-end for our project.
 public class VirtualPet {
 
-    public static void main(String[] args) {
+
+    public VirtualPet(String name, int hunger, int thirst, int mood, int cleanliness, String color, boolean isAlive, boolean isPetAlive) {
+        this.name = name;
+        this.hunger = hunger;
+        this.thirst = thirst;
+        this.mood = mood;
+        this.cleanliness = cleanliness;
+        this.color = color;
+        this.isAlive = isAlive;
+        this.isPetAlive = isPetAlive;
+    }
+
+    public VirtualPet() {
 
     }
 
+    public static void main(String[] args) {
+
+    }
 
 
     // Defines variables
@@ -18,7 +33,7 @@ public class VirtualPet {
     private boolean isAlive;
 
     public VirtualPet(String newName) {
-        name = newName;
+
     }
 
     // Method to print greeting to console
