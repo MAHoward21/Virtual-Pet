@@ -13,6 +13,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class VirtualPetTest {
 
+    private Object pet;
+
     @Test
     public void shouldHaveNameInConstructor() {
 
@@ -59,7 +61,57 @@ public class VirtualPetTest {
         int hungerAfterTick = pet.getHunger();
         assertEquals(initialHunger - 5, hungerAfterTick);
     }
+
+    @Test
+    public void shouldFeed() {
+        VirtualPet pet = new VirtualPet("");
+        int feedPet = pet.getHunger(); //
+        pet.feed();
+        int fedPet = pet.getHunger();
+        assertEquals(feedPet = 0, fedPet);
+    }
+
+    @Test
+    public void shouldDrink() {
+        VirtualPet pet = new VirtualPet("");
+        int petThirst = pet.getThirst();
+        pet.drink();
+        int wateredPet = pet.getThirst();
+        assertEquals(petThirst = 0, wateredPet);
+    }
+
+    @Test
+    public void shouldPlay() {
+        VirtualPet pet = new VirtualPet("");
+        int playPet = pet.getMood();
+        pet.play();
+        int tiredPet = pet.getMood();
+        assertEquals(playPet = 95, tiredPet);
+    }
+
+    @Test
+    public void keepsThirstFromNegative() {
+        VirtualPet pet = new VirtualPet("");
+        for(int x = 0; x <5; x++) {
+            pet.drink();
+        }
+        assertEquals(0, pet.getThirst());
+    }
+    @Test
+    public void keepsBoredomFromNegative() {
+        VirtualPet pet = new VirtualPet("");
+        for(int x=0; x <5; x++) {
+            pet.play();
+        }
+        assertEquals(75, pet.getMood());
+    }
+    @Test
+    public void keepsHungerFromNegative() {
+        VirtualPet pet = new VirtualPet("");
+        for (int x = 0; x < 5; x++) {
+            pet.feed();
+        }
+        assertEquals(0, pet.getHunger());
+
+    }
 }
-
-
-
