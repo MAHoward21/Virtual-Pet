@@ -14,6 +14,8 @@ public class VirtualPet {
     private int thirst = 0;
     private int mood = 100;
     private int cleanliness = 100;
+    private String color;
+    private boolean isAlive;
 
     public VirtualPet(String newName) {
         name = newName;
@@ -66,6 +68,7 @@ public class VirtualPet {
     }
     // Method to give a pet a treat & increase happiness
     public void play() {
+        System.out.println("You play with " + name + "they are overjoyed at the attention");
         mood -= 5;
         if (mood < 0) {
             mood = 0;

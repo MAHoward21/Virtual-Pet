@@ -18,7 +18,6 @@ public class VirtualPetShelter<collection> {
     }
 
     // Create method to find a pet
-    // Why can't it find petName String where it's stored
 
     public VirtualPet grabPet(String petName) {
         return petsInShelter.get(petName);
@@ -65,7 +64,6 @@ public class VirtualPetShelter<collection> {
 
 
     // Method to grab the number of pets
-        // ?????
 
     public int getNumberOfPets() {
             return petsInShelter.size();
