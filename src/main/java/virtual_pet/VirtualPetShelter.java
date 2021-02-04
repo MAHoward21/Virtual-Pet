@@ -6,6 +6,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 
+// None of this is being used, do we need to?
+
 
 public class VirtualPetShelter {
 

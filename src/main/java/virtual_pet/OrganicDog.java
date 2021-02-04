@@ -7,9 +7,9 @@ package virtual_pet;
 
     public OrganicDog(String name, int age, int hungerStatus, int thirstStatus, int moodLevel, int hungerStatus1, int thirstStatus1, int moodLevel1) {
         super(name, age, hungerStatus, thirstStatus, moodLevel);
-        this.hungerStatus = hungerStatus1;
-        this.thirstStatus = thirstStatus1;
-        this.moodLevel = moodLevel1;
+        this.hungerStatus = hungerStatus;
+        this.thirstStatus = thirstStatus;
+        this.moodLevel = moodLevel;
     }
 
 

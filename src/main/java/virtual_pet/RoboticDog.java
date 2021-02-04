@@ -26,6 +26,7 @@ import javax.naming.Name;
 
         @Override
         public int getMood() {
+
             return super.getMood();
         }
 

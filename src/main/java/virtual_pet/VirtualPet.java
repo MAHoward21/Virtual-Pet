@@ -18,15 +18,11 @@ public class VirtualPet {
 
     }
 
-    public static void main(String[] args) {
-
-    }
-
 
     // Constructors
     private String name;
-    private int hunger = 0;
-    private int thirst = 0;
+    public int hunger = 0;
+    public int thirst = 0;
     private int mood = 100;
     private int cleanliness = 100;
     private String color;
@@ -48,22 +44,27 @@ public class VirtualPet {
     // Methods to return values for stats
 
     public String getName() {
+
         return name;
     }
 
     public int getHunger() {
+
         return hunger;
     }
 
     public int getThirst() {
+
         return thirst;
     }
 
     public int getMood() {
+
         return mood;
     }
 
     public int getCleanliness() {
+
         return cleanliness;
     }
 
@@ -71,7 +72,8 @@ public class VirtualPet {
 
     // Method to feed pet
     public void feed() {
-        hunger -= 5;
+        System.out.println("You give your pet some food. That hit the spot!");
+        hunger -= 15;
         if (hunger <= 0) {
             hunger = 0;
         }
@@ -81,7 +83,8 @@ public class VirtualPet {
     }
     // Method to give water to pet
     public void drink() {
-        thirst -= 5;
+        System.out.println("You give your pet a drink of water & they gulp it down.");
+        thirst -= 15;
         if (thirst <= 0) {
             thirst = 0;
         }
@@ -91,7 +94,7 @@ public class VirtualPet {
     }
     // Method to give a pet a treat & increase happiness
     public void play() {
-        System.out.println("You play with " + name + "they are overjoyed at the attention");
+        System.out.println("You play with your pet. They are overjoyed at the attention.");
         mood += 20;
         if (mood <= 0) {
             mood = 0;
@@ -102,6 +105,7 @@ public class VirtualPet {
     }
     // Method to give the pet a bath & improve cleanliness
     public void bathe() {
+        System.out.println("You give your pet a bath. They're squeaky clean now!");
         cleanliness += 20;
         if (cleanliness < 0) {
             cleanliness = 0;
@@ -111,6 +115,7 @@ public class VirtualPet {
         }
     }
     public void tick(){
+        System.out.println("As time passes your pet's stats diminish.");
         mood -= 15;
         thirst += 15;
         hunger += 15;
@@ -118,6 +123,7 @@ public class VirtualPet {
     }
 
     public boolean getIsThisPetAlive(){
+
         return isPetAlive;
     }
 }

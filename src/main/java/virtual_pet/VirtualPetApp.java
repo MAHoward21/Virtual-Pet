@@ -33,10 +33,11 @@ public class VirtualPetApp {
         // Try to figure out someway to let the user choose between subclasses.
 
         VirtualPet pet = new VirtualPet(petName);
+        // While the integer holding petChoice does not equal zero & is less than 5, do this.
+
         while (0 != petChoice && petChoice < 5) {
             if (petChoice == 1) {
                 System.out.println("You have chosen an Organic pet!");
-
                 System.out.println("What would you like to name your organic pet?");
                 petName = inputScanner.nextLine();
                 pet = new VirtualPet(petName);
@@ -46,7 +47,7 @@ public class VirtualPetApp {
             } else if (petChoice == 2) {
                 System.out.println("You have chosen a robotic pet!");
                 System.out.println("What would you like to name your robotic pet?");
-                String petName = inputScanner.nextLine();
+                petName = inputScanner.nextLine();
                 pet = new VirtualPet(petName);
                 System.out.println("Congratulations on adopting your new robotic pet " + petName + "!");
                 System.out.println("A pet is a lot of responsibility. Be sure to pay attention to it's status!");
@@ -55,7 +56,7 @@ public class VirtualPetApp {
             } else if (petChoice == 3) {
                 System.out.println("You have chosen an Undead pet!");
                 System.out.println("What would you like to name your undead pet?");
-                String petName = inputScanner.nextLine();
+                petName = inputScanner.nextLine();
                 pet = new VirtualPet(petName);
                 System.out.println("Congratulations on adopting your new undead pet " + petName + "!");
                 System.out.println("A pet is a lot of responsibility. Be sure to pay attention to it's status!");
@@ -64,18 +65,22 @@ public class VirtualPetApp {
                 System.out.println("Thanks for playing virtual pet! Come again soon!");
                 break;
             }
+            else {
+                System.out.println("Huh? I didn't understand your input");
+                break;
+            }
         }
-        // I believe here we want to create a virtualPet & use that to play the greeting.
-        boolean petExists;
-        if (pet != null) {
-            petExists = true;
-        } else {
-            petExists = false;
-        }
-        while (petExists = true) {
+//        // I believe here we want to create a virtualPet & use that to play the greeting.
+//        boolean petExists;
+//        if (pet != null) {
+//            petExists = true;
+//        } else {
+//            petExists = false;
+//        }
+        while (true) {
             System.out.println("Would you like to check on your pet's status?");
             System.out.println("Press 1 to say yes.");
-            System.out.println("Press to say no and exit the game.");
+            System.out.println("Press 2 to say no & exit the game.");
             int decisionToCheckStats = inputScanner.nextInt();
             inputScanner.nextLine();
             while (0 != decisionToCheckStats && decisionToCheckStats < 3) {
@@ -87,15 +92,16 @@ public class VirtualPetApp {
                     break;
                 } else {
                     System.out.println("Thanks for coming to our shelter, hope to see you again!");
+                    break;
                 }
             }
-            System.out.println("---------------");
+            System.out.println("-------------------");
             System.out.println("Would you like to care for your pet?");
-            System.out.println("Press 1 to feed your pet");
-            System.out.println("Press 2 to bathe your pet");
-            System.out.println("Press 3 to give your pet water");
-            System.out.println("Press 4 to play with your pet");
-            System.out.println("Press 5 to exit the game");
+            System.out.println("Press 1 to feed your pet.");
+            System.out.println("Press 2 to bathe your pet.");
+            System.out.println("Press 3 to give your pet water.");
+            System.out.println("Press 4 to play with your pet.");
+            System.out.println("Press 5 to exit the game.");
             int decisionWhatToDoWithPet = inputScanner.nextInt();
             inputScanner.nextLine();
             while (0 != decisionWhatToDoWithPet && decisionWhatToDoWithPet < 6) {
