@@ -13,6 +13,12 @@ public class RoboticCat extends RoboticPet {
         this.moodLevel = moodLevel;
 
     }
+    @Override
+    public void tick() {
+        batteryLevel = batteryLevel - 10;
+        oilLevel = oilLevel - 10;
+    }
+
 
     // Same situation as w/ dog we're going to need our overridden methods down here
     // So whatever makes our roboticCat different from it's parent class really.

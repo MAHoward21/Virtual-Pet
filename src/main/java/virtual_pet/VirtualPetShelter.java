@@ -6,32 +6,28 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 
-public class VirtualPetShelter<collection> {
+
+public class VirtualPetShelter {
 
     // Creates a Map
-    private Map<String, VirtualPet> petsInShelter = new HashMap<>();
+    HashMap<String, VirtualPet> petsInShelter = new HashMap<String, VirtualPet>();
 
     // Creates a method to admit pets to petsInShelter
 
-    public void admitPet(VirtualPet pet) {
-        petsInShelter.put(pet.getName(), pet);
+    public void admitPet(String name, VirtualPet pet) {
+        petsInShelter.put(name, pet);
     }
 
     // Create method to find a pet
 
-    public VirtualPet grabPet(String petName) {
-        return petsInShelter.get(petName);
-    }
+    public VirtualPet grabAllPets(String Name) {
+        return petsInShelter.get(Name);
 
-
-    // Creates collection to hold pets & values
-    public Collection<VirtualPet> adoptablePets() {
-        return petsInShelter.values();
     }
 
     // Method to adopt out pets (remove pet)
-    public void adoption(String petName) {
-        petsInShelter.remove(petName);
+    public void adoption(String Name) {
+        petsInShelter.remove(Name);
     }
 
     // Feed pet method for all of shelter w/ a count/ advanced for loop
@@ -99,4 +95,5 @@ public class VirtualPetShelter<collection> {
             }
             return namesAndText;
         }
-}
+
+    }

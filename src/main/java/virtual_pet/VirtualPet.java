@@ -23,7 +23,7 @@ public class VirtualPet {
     }
 
 
-    // Defines variables
+    // Constructors
     private String name;
     private int hunger = 0;
     private int thirst = 0;
