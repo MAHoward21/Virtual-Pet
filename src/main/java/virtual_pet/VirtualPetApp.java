@@ -35,7 +35,7 @@ public class VirtualPetApp {
                 System.out.println("What would you like to name your organic pet?");
                 String petName = inputScanner.nextLine();
                 pet = new VirtualPet(petName);
-                System.out.println("Congratulations on adopting your new organic pet " + petName + "!");
+                System.out.println("Congratulations on adopting your new organic pet, " + petName + "!");
                 System.out.println("A pet is a lot of responsibility be sure to pay attention to it's status!");
                 break;
             } else if (petChoice == 2) {
@@ -67,8 +67,8 @@ public class VirtualPetApp {
         }
         while (petExists = true) {
             System.out.println("Would you like to check your pets stats?");
-            System.out.println("Press 1 to say yes");
-            System.out.println("Press to say no and close the game");
+            System.out.println("Press 1 to say yes.");
+            System.out.println("Press to say no and exit the game.");
             int decisionToCheckStats = inputScanner.nextInt();
             inputScanner.nextLine();
             while (0 != decisionToCheckStats && decisionToCheckStats < 3) {
@@ -115,6 +115,7 @@ public class VirtualPetApp {
                     break;
                 }
             }
+            pet.tick();
 
         }
 

@@ -70,37 +70,49 @@ public class VirtualPet {
     // Method to feed pet
     public void feed() {
         hunger -= 5;
-        if (hunger < 0) {
+        if (hunger <= 0) {
             hunger = 0;
+        }
+        if(hunger >= 100){
+            hunger = 100;
         }
     }
     // Method to give water to pet
     public void drink() {
         thirst -= 5;
-        if (thirst < 0) {
+        if (thirst <= 0) {
             thirst = 0;
+        }
+        if(thirst >= 100){
+            thirst = 100;
         }
     }
     // Method to give a pet a treat & increase happiness
     public void play() {
         System.out.println("You play with " + name + "they are overjoyed at the attention");
         mood -= 5;
-        if (mood < 0) {
+        if (mood <= 0) {
             mood = 0;
+        }
+        if(mood >= 100){
+            mood = 100;
         }
     }
     // Method to give the pet a bath & improve cleanliness
     public void bathe() {
-        cleanliness -= 0;
+        cleanliness += 20;
         if (cleanliness < 0) {
             cleanliness = 0;
         }
+        if(cleanliness >= 100){
+            cleanliness = 100;
+        }
     }
     public void tick(){
-        mood -= 5;
-        thirst -= 5;
-        hunger -= 5;
-        cleanliness -=5;
+        mood -= 10;
+        thirst += 10;
+        hunger += 10;
+        cleanliness -= 10;
     }
 
     public boolean getIsThisPetAlive(){
