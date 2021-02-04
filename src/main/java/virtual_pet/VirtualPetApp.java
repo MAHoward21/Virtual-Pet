@@ -1,5 +1,6 @@
 package virtual_pet;
 
+import javax.sound.midi.Soundbank;
 import java.util.Collection;
 import java.util.Scanner;
 
@@ -63,19 +64,58 @@ public class VirtualPetApp {
         // I believe here we want to create a virtualPet & use that to play the greeting.
 
         System.out.println("Would you like to check your pets stats?");
-        System.out.println("Press 1 for yes & 2 to say no & close the game");
+        System.out.println("Press 1 to say yes");
+        System.out.println("Press to say no and close the game");
         int decisionToCheckStats = inputScanner.nextInt();
         inputScanner.nextLine();
         while(0 !=decisionToCheckStats && decisionToCheckStats < 3){
             if(decisionToCheckStats == 1){
                 System.out.println("Your pets hunger is " + pet.getHunger());
                 System.out.println("Your pets thirst is " + pet.getThirst());
-                System.out.println("Your pets hunger is " + pet.getCleanliness());
-                System.out.println("Your pets hunger is " + pet.getMood());
+                System.out.println("Your pets cleanliness is " + pet.getCleanliness());
+                System.out.println("Your pets mood is " + pet.getMood());
                 break;
             }
             else {
                 System.out.println("Thanks for coming to our shelter, hope to see you again!");
+            }
+        }
+        System.out.println("---------------");
+        System.out.println("Would you like to care for your pet?");
+        System.out.println("Press 1 to feed your pet");
+        System.out.println("Press 2 to bathe your pet");
+        System.out.println("Press 3 to give your pet water");
+        System.out.println("Press 4 to play with your pet");
+        System.out.println("Press 5 to exit the game");
+        int decisionWhatToDoWithPet = inputScanner.nextInt();
+        inputScanner.nextLine();
+        while(0 != decisionWhatToDoWithPet && decisionWhatToDoWithPet < 6){
+            if(decisionWhatToDoWithPet == 1){
+                pet.feed();
+                System.out.println("Thanks for the food!");
+                break;
+            }
+            else if(decisionWhatToDoWithPet == 2){
+                pet.bathe();
+                System.out.println("Thanks for the bath friend!");
+                break;
+            }
+            else if(decisionWhatToDoWithPet == 3){
+                pet.drink();
+                System.out.println("Thank you for the water!");
+                break;
+            }
+            else if(decisionWhatToDoWithPet == 4){
+                pet.play();
+                System.out.println("Thanks for playing with me!");
+                break;
+            }
+            else if(decisionWhatToDoWithPet == 5){
+                break;
+            }
+            else{
+                System.out.println("Huh?");
+                break;
             }
         }
 
