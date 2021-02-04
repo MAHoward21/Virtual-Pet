@@ -11,6 +11,9 @@ import javax.naming.Name;
             super(name, batteryLevel, oilLevel, moodLevel);
         }
 
+
+        // Methods here to overwrite the super class methods and make unique to subclass.
+
         @Override
         public void batteryCharge() {
             super.batteryCharge();
@@ -28,12 +31,9 @@ import javax.naming.Name;
 
         @Override
         public void tick() {
-            batteryLevel = batteryLevel - 10;
-            oilLevel = oilLevel - 10;
+            batteryLevel = batteryLevel - 15;
+            oilLevel = oilLevel - 15;
         }
     }
-
-    // Possible overrides here?
-    // Have to decide how we're going to handle.
 
 

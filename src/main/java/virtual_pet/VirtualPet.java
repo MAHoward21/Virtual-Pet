@@ -37,10 +37,12 @@ public class VirtualPet {
     }
 
     // Method to print greeting to console
+    // Not using because it can't grab the petName we create through the input scanner.
+
     public void greeting() {
-        System.out.println("Hi. My name is " + name + "I am so happy you have chosen to be my friend " +
-                "I am feeling " + hunger + " I am also feeling " + thirst + "I am feeling " + mood +
-                "How can you help me?");
+        System.out.println("Hi. My name is " + name + " I am so happy you have chosen to be my friend " +
+                " I am feeling " + hunger + " I am also feeling " + thirst + " I am feeling " + mood +
+                " How can you help me?");
     }
 
     // Methods to return values for stats
@@ -90,7 +92,7 @@ public class VirtualPet {
     // Method to give a pet a treat & increase happiness
     public void play() {
         System.out.println("You play with " + name + "they are overjoyed at the attention");
-        mood -= 5;
+        mood += 20;
         if (mood <= 0) {
             mood = 0;
         }
@@ -109,10 +111,10 @@ public class VirtualPet {
         }
     }
     public void tick(){
-        mood -= 10;
-        thirst += 10;
-        hunger += 10;
-        cleanliness -= 10;
+        mood -= 15;
+        thirst += 15;
+        hunger += 15;
+        cleanliness -= 15;
     }
 
     public boolean getIsThisPetAlive(){

@@ -7,9 +7,10 @@ import java.util.Scanner;
 // This is basically the front end of our project.
 
 public class VirtualPetApp {
-    private static String petName;
+    public static String petName;
 
     public static void main(String[] args) {
+
 
         Scanner inputScanner = new Scanner(System.in);
         System.out.println("Welcome to the Fellowship of The String Pet Shelter!");
@@ -29,29 +30,35 @@ public class VirtualPetApp {
 
         // This part of the code handles how we deal with the user input regarding pet choice.
         // e.g. if user hits 1, they've chosen organic pet.
+        // Try to figure out someway to let the user choose between subclasses.
+
         VirtualPet pet = new VirtualPet(petName);
         while (0 != petChoice && petChoice < 5) {
             if (petChoice == 1) {
+                System.out.println("You have chosen an Organic pet!");
+
                 System.out.println("What would you like to name your organic pet?");
-                String petName = inputScanner.nextLine();
+                petName = inputScanner.nextLine();
                 pet = new VirtualPet(petName);
                 System.out.println("Congratulations on adopting your new organic pet, " + petName + "!");
-                System.out.println("A pet is a lot of responsibility be sure to pay attention to it's status!");
+                System.out.println("A pet is a lot of responsibility. Be sure to pay attention to it's status!");
                 break;
             } else if (petChoice == 2) {
+                System.out.println("You have chosen a robotic pet!");
                 System.out.println("What would you like to name your robotic pet?");
                 String petName = inputScanner.nextLine();
                 pet = new VirtualPet(petName);
                 System.out.println("Congratulations on adopting your new robotic pet " + petName + "!");
-                System.out.println("A pet is a lot of responsibility be sure to pay attention to it's status!");
+                System.out.println("A pet is a lot of responsibility. Be sure to pay attention to it's status!");
                 break;
 
             } else if (petChoice == 3) {
+                System.out.println("You have chosen an Undead pet!");
                 System.out.println("What would you like to name your undead pet?");
                 String petName = inputScanner.nextLine();
                 pet = new VirtualPet(petName);
                 System.out.println("Congratulations on adopting your new undead pet " + petName + "!");
-                System.out.println("A pet is a lot of responsibility be sure to pay attention to it's status!");
+                System.out.println("A pet is a lot of responsibility. Be sure to pay attention to it's status!");
                 break;
             } else if (petChoice == 4) {
                 System.out.println("Thanks for playing virtual pet! Come again soon!");
@@ -66,7 +73,7 @@ public class VirtualPetApp {
             petExists = false;
         }
         while (petExists = true) {
-            System.out.println("Would you like to check your pets stats?");
+            System.out.println("Would you like to check on your pet's status?");
             System.out.println("Press 1 to say yes.");
             System.out.println("Press to say no and exit the game.");
             int decisionToCheckStats = inputScanner.nextInt();
@@ -116,7 +123,6 @@ public class VirtualPetApp {
                 }
             }
             pet.tick();
-
         }
 
     }

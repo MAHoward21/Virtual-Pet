@@ -15,8 +15,8 @@ public class RoboticCat extends RoboticPet {
     }
     @Override
     public void tick() {
-        batteryLevel = batteryLevel - 10;
-        oilLevel = oilLevel - 10;
+        batteryLevel = batteryLevel - 15;
+        oilLevel = oilLevel - 15;
     }
 
 
