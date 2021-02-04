@@ -68,10 +68,11 @@ public class VirtualPetApp {
         inputScanner.nextLine();
         while(0 !=decisionToCheckStats && decisionToCheckStats < 3){
             if(decisionToCheckStats == 1){
-                System.out.println(pet.getHunger());
-                pet.getThirst();
-                pet.getCleanliness();
-                pet.getMood();
+                System.out.println("Your pets hunger is " + pet.getHunger());
+                System.out.println("Your pets thirst is " + pet.getThirst());
+                System.out.println("Your pets hunger is " + pet.getCleanliness());
+                System.out.println("Your pets hunger is " + pet.getMood());
+                break;
             }
             else {
                 System.out.println("Thanks for coming to our shelter, hope to see you again!");

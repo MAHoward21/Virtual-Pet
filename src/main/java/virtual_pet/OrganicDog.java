@@ -53,5 +53,3 @@ package virtual_pet;
         }
     }
     // Methods that differentiate organic dog from others
-
-}
