@@ -20,13 +20,13 @@ public class VirtualPet {
 
 
     // Constructors
-    private String name;
+    public  String name;
     public int hunger = 0;
     public int thirst = 0;
-    private int mood = 100;
-    private int cleanliness = 100;
-    private String color;
-    private boolean isAlive;
+    public int mood = 100;
+    public int cleanliness = 100;
+    public String color;
+    public boolean isAlive;
 
     public VirtualPet(String newName) {
 
