@@ -59,7 +59,7 @@ public class VirtualPetTest {
         int initialHunger = pet.getHunger();
         pet.tick();
         int hungerAfterTick = pet.getHunger();
-        assertEquals(initialHunger - 5, hungerAfterTick);
+        assertEquals(initialHunger = 15, hungerAfterTick);
     }
 
     @Test
@@ -86,7 +86,7 @@ public class VirtualPetTest {
         int playPet = pet.getMood();
         pet.play();
         int tiredPet = pet.getMood();
-        assertEquals(playPet = 95, tiredPet);
+        assertEquals(playPet = 100, tiredPet);
     }
 
     @Test
@@ -103,7 +103,7 @@ public class VirtualPetTest {
         for(int x=0; x <5; x++) {
             pet.play();
         }
-        assertEquals(75, pet.getMood());
+        assertEquals(100, pet.getMood());
     }
     @Test
     public void keepsHungerFromNegative() {
